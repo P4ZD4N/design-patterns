@@ -5,6 +5,5 @@ abstract class Car(
     fuelType: FuelType,
     productionYear: Int
 ) {
-    abstract fun getSteeringWheelPosition(): String
-    abstract fun setSteeringWheelPosition(position: String)
+    abstract fun getSteeringWheelPosition(): SteeringWheelPosition
 }

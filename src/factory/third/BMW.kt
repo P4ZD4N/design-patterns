@@ -2,16 +2,11 @@ package factory.third
 
 class BMW(engineCapacity: Double,
           fuelType: FuelType,
-          productionYear: Int
+          productionYear: Int,
+          private var steeringWheelPosition: SteeringWheelPosition
 ) : Car(engineCapacity, fuelType, productionYear) {
 
-    private var steeringWheelPosition: String = ""
-
-    override fun getSteeringWheelPosition(): String {
+    override fun getSteeringWheelPosition(): SteeringWheelPosition {
         return steeringWheelPosition
-    }
-
-    override fun setSteeringWheelPosition(position: String) {
-        steeringWheelPosition = position
     }
 }
