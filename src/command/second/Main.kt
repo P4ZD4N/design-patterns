@@ -1,19 +1,26 @@
 package command.second
 
+import command.second.command.PlayFirstTrackCommand
+import command.second.command.PlayNextTrackCommand
+import command.second.command.PlayRandomTrackCommand
+
 
 fun main() {
     val musicPlayer = MusicPlayer()
+    val remote = MusicPlayerRemote()
 
-    musicPlayer.playFirstTrack()
-    musicPlayer.playFirstTrack()
+    remote.musicPlayerCommand = PlayFirstTrackCommand(musicPlayer)
+    remote.pressButton()
 
-    musicPlayer.playNextTrack()
-    musicPlayer.playNextTrack()
-    musicPlayer.playNextTrack()
-    musicPlayer.playNextTrack()
-    musicPlayer.playNextTrack()
-    musicPlayer.playNextTrack()
+    remote.musicPlayerCommand = PlayNextTrackCommand(musicPlayer)
+    remote.pressButton()
+    remote.pressButton()
+    remote.pressButton()
+    remote.pressButton()
+    remote.pressButton()
+    remote.pressButton()
 
-    musicPlayer.playRandomTrack()
-    musicPlayer.playRandomTrack()
+    remote.musicPlayerCommand = PlayRandomTrackCommand(musicPlayer)
+    remote.pressButton()
+    remote.pressButton()
 }
